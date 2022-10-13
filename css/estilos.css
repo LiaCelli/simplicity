@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+}
+
+/* remover os espacos padrao da indicação* CSS reset  */
+
+body, h1, h2, p, figure{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* deixar as imagens flexiveis */
+img {
+    max-width: 100%;
+}
+
+/* corpo da pagina fonte */
+body {
+    font-family: Arial; }
+
+/* tirar o anderline _  */
+a {
+    text-decoration: none;
+    color: blue;
+
+}
+
+header {
+    /* so levar o texto para o centro e pintar fundo */
+
+    text-align: center;
+    /* mexer com a altura é heigth */
+    height: 100px;
+    padding-top: 10px;
+    
+
+}
+
+/* letra maiuscula dos textos */
+h1,
+nav {
+    text-transform: uppercase;
+}
+
+/* regras para formatar o nome do site */
+
+h1 {
+    font-size: 25px;
+}
+
+
+/* borda arrendodada broder-radius */
+
+
+h1 a {
+    color: white;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
+
+nav {
+    /* background-color: rgba(94, 94, 90, 0.178); */
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    /* align (alinha os itens no centro da caixa) */
+    align-items: center;
+}
+
+/* regra de estado inicial dp link */
+
+nav a {
+
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    /* Usamos a propriedades para transformar o tipo de elemento */
+    width: 33%;
+    transition: 500ms;
+
+
+}
+
+/* regra de acionamento do link */
+nav a:hover,
+nav a:focus {
+    background-color: #2b2828;
+
+}
+
+/* regra de conteudo (articles) */
+.destaque {
+    background-image: url(../imagens/fundo-destaque.jpg );
+    height: 500px;
+    /* altura heigth */
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Alinhado todos os itens juntos, como um conteudo só ( e assim, evitando espacos entre ele*/
+
+    align-content: center;
+}
+
+.destaque h2 {
+    font-size: 64px;
+    animation-name: aparecer;
+    animation-duration: 2s;
+
+}
+
+.destaque p {
+    font-size: 32px;
+    font-weight: bold;
+    animation-name: aparecer;
+    animation-duration: 2s;
+
+    /* atraso no inicio da animação e o backwards atrasa */
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+
+
+}
+
+/* para dar movimento criar uma animação  */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+article h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+article p {
+    padding: 5px 10px;
+}
+
+figure {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    color: white;
+    text-shadow: black 1px 1px 3px;
+    text-align: center;
+}
+
+.historia iframe {
+    width: 100%;
+    max-width: 800px;
+
+}
+
+.localizacao {
+    text-align: center;
+}
+
+.localizacao iframe {
+    text-align: center;
+    width: 100%;
+
+}
+
+footer {
+    height: 200px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.conteudo {
+    background-color: rgb(105, 141, 141);
+    border-radius: 10px;
+
+}
+
+table,
+td,
+th {
+    border: solid 2px black;
+    border-collapse: collapse;
+    /* remove espaçamentos entre as bordas */
+}
+
+table {
+    margin: auto;
+    width: 80%;
+}
+
+
+th,
+td {
+    padding: 5px;
+}
+
+/* odd -impar  even-par */
+tr:nth-child(even) {
+    background-color: rgb(167, 167, 83);
+    color: black;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+td:first-child {
+    text-transform: uppercase;
+}
+
+td:nth-child(2) {
+    color: red;
+}
+
+td:last-child {
+    color: blue;
+}
+
+/* pseudo-classes: nth-child. first-child , last-child ec2elis */
+
+
+/* feito class escrito fotos no html, Ec2elis */
+.fotos img {
+    border-radius: 100%;
+    transform: scale(0.8);
+    transition: 500ms;
+    box-shadow: rgb(53, 53, 145) 0 0 20px 10px;
+
+
+}
+
+/* para iniciar tamanho original da foto */
+.fotos img:hover {
+    transform: scale(1.0);
+
+}
+
+/* regras de formulario */
+form {
+    background-color: rgb(42, 104, 155);
+    width: 90%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 5px;
+
+}
+#nome, #email, #nascimento, #assunto, #mensagem {
+    width: 100%;
+    height: 40px;
+    border: none;
+    box-shadow: rgba(0, 0, 0,0.24) 0 0 2px;
+}
+
+#mensagem {height: auto;
+resize: none;}
+
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    
+}
+
+button:hover, button:focus { background-color: darkblue;}
+
+
+
+
+
+
+
+
+/* regras condicionais usando media Queries */
+@media screen and (min-width: 530px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding-top: 0;
+    }
+
+
+
+    h1 {
+        margin-left: 2px;
+    }
+
+    nav {
+        margin-right: 2px;
+        margin-top: 0;
+
+    }
+
+
+}
+
+/* Crie uma media query para telas a partir de 800px, em que os seguintes ajustes sejam feitos:
+
+-nome do site: tamanho 30px
+-cabeçalho: altura de 85px
+-menu: largura de 70%
+-links do menu: espaçamento interno de 20px
+-destaque: altura de 550px
+-parágrafos: tamanho 20px */
+@media screen and (min-width: 800px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    header {
+        height: 85px;
+    }
+
+    nav a {
+        padding: 20px;
+    }
+
+    .destaque {
+        height: 550px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .limitador {
+        max-width: 1000px;
+        margin: auto;
+
+    }
+
+}
